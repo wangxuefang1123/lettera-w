@@ -1,5 +1,6 @@
 export const configurazione = {
-  testo: "Hi :)",
+  testo: "wang xuefang",
+
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
