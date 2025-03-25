@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "f",
+  testo: "x",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
