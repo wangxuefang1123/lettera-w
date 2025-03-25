@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "wxf",
+  testo: "f",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
@@ -36,35 +36,19 @@ export function disegnaPunto({
   beta = 0,
   gamma = 0,
 }) {
-  push();
-  translate(x, y);
+  let altezza = 50;
+  let lunghezza = 50 * sin(frameCount + indice);
 
-  noFill();
-  stroke(0);
+  let ax = x + lunghezza / 2;
+  let ay = y;
+  let cx = x - lunghezza / 2;
+  let cy = y;
+  let bx = x;
+  let by = y - altezza;
 
-  // Use orientation data to influence color
-  // Map alpha (z-rotation) to hue (0-360)
-  const hue = map(alpha, 0, 360, 0, 360);
-
-  // Map beta (front-to-back tilt) to saturation (50-100)
-  const saturation = map(abs(beta), 0, 90, 50, 100);
-
-  // Map gamma (left-to-right tilt) to brightness (50-100)
-  const brightness = map(abs(gamma), 0, 90, 50, 100);
-
-  colorMode(HSB, 360, 100, 100);
-  fill(hue, saturation, brightness);
-  noStroke();
-
-  rectMode(CENTER);
-  rotate(frameCount + indice);
-
-  // Add slight variation based on device tilt
-  scale(1 + volume * 10 + (abs(gamma) / 90) * 0.5);
-  rect(0, 0, unita / 2);
-  pop();
+  triangle(bx, by, cx, cy, ax, ay);
+  fill("deeppink");
 }
-
 //
 
 export function caricamentoRisorse() {}
@@ -81,7 +65,7 @@ export function impostazioni() {
 export function sotto(disegnaTesto) {
   background(255);
 
-  fill("deeppink");
+  fill("blue");
   disegnaTesto();
 }
 
