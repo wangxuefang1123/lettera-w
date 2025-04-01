@@ -1,9 +1,9 @@
 export const configurazione = {
-  testo: "x",
+  testo: "A",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
-  percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
+  percorsoFont: "./assets/ABA-Regular.ttf",
   mostraTestoSotto: true,
   mostraTestoSopra: false,
 };
