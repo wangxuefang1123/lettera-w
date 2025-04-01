@@ -63,7 +63,7 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background(255);
+  background("black");
 
   fill("blue");
   disegnaTesto();
