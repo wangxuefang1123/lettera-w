@@ -46,12 +46,14 @@ export function disegnaPunto({
   let bx = x;
   let by = y - altezza;
 
-  triangle(bx, by, cx, cy, ax, ay);
+  image(img, 0, 0);
   fill("deeppink");
 }
 //
 
-export function caricamentoRisorse() {}
+export function caricamentoRisorse() {
+  img = loadImage("./assets/Glitch Abstract Arts.jpg");
+}
 
 export function impostazioni() {
   frameRate(30);
