@@ -1,9 +1,9 @@
 export const configurazione = {
-  testo: "A",
+  testo: "X",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
-  percorsoFont: "./assets/ABA-Regular.ttf",
+  percorsoFont: "./assets/Plaster-Regular.ttf",
   mostraTestoSotto: true,
   mostraTestoSopra: false,
 };
